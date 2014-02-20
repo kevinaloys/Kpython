@@ -20,6 +20,8 @@
 
 #     the integer numbers will be in the [0 .. 1,000,000] range
 
+__author__="Kevin Aloysius"
+
 def check_growth(d1,d2):
 
 	if(d1>d2):
