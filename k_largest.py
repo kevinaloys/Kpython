@@ -15,5 +15,5 @@ def k_largest(k,array):
 	for i in range(k):
 		print array[i]
 
-a = [5,8,25,15,45,65,75,41,23]
+a = [654,5487,546878,5,8,25,15,45,65,75,41,23,29]
 k_largest(5,a)
