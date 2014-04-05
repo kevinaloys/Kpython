@@ -1,4 +1,6 @@
 #!/usr/bin/python
+
+__author__ = "Kevin Aloysius"
 def k_largest(list, k):
 
 	sorted_list = sorted(list)

@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # Bubble Sort to find k largest from an array
+
+__author__ = "Kevin Aloyius"
 def k_smallest(array, k):
 
 	for i in range(len(array)):

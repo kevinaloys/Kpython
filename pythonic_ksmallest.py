@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+__author__ = "Kevin Aloysius"
 def k_smallest(list, k):
 
 	sorted_list = sorted(list)
