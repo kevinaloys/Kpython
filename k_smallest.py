@@ -3,20 +3,20 @@
 
 __author__ = "Kevin Aloyius"
 def k_smallest(array, k):
+	for j in range(len(array)):
+		for i in range(len(array)-j-1):
+				if array[i] > array[i+1]:
+					# temp = array[j+1]
+					# array[j+1] = array[j]
+					# array[j] = temp
+					array[i], array[i+1] = array[i+1],array[i]
 
-	for i in range(len(array)):
-		for j in range(len(array)-1):
-
-			if array[j] < array[j+1]:
-				temp = array[j+1]
-				array[j+1] = array[j]
-				array[j] = temp
-	print array[:k]
+				print array
 
 
 def main():
-	x = [3,4,5,6,5,795,564,5]
-	k_smallest(x,2)
+	x = [9,8,7,6,5,4,3,2,1]
+	k_smallest(x,3)
 
 if __name__ == "__main__":
 	main()
