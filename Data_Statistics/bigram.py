@@ -18,13 +18,22 @@ def corpus_generation(sentence_list):
 	for sentence in sentence_list:
 		strings = sentence.split(' ')
 		for string in strings:
-			corpus_list.append(string)
-
+			if not string in corpus_list:
+				corpus_list.append(string)
 	return corpus_list
+
+def corpus_probablity_table(corpus_list):
+	probablity_table = {}
+	for words in corpus_list:
+		for word in corpus_list:
+			probablity_table[(words),(word)] = 0
+	return probablity_table
 def main():
 
 	sentence_list = open_file('sample_text.txt')
-	print corpus_generation(sentence_list)
+	corpus_list = corpus_generation(sentence_list)
+	probablity_table = corpus_probablity_table(corpus_list)
+	print probablity_table
 
 if __name__ == "__main__":
 	main()
