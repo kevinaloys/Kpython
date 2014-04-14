@@ -1,4 +1,4 @@
-#This is a python program to calculate the bigram probablity of a sentence
+#This is a python program to generate bigram probablity of a sentence
 
 def open_file(filename):
 	f = open(filename,'rU')
@@ -9,7 +9,8 @@ def open_file(filename):
 		string = string.lower()
 		string = string.strip()
 		sentence.append(string)
-	print sentence
+	return sentence
+		
 
 def main():
 	open_file('sample_text.txt')
