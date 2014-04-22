@@ -1,4 +1,6 @@
 # Find the First non-repeated character in a string.
+# 
+__author__ = "Kevin Aloysius"
 def find_first_non_repeated_stirng(string):
 	string = string + ' '
 	first = string[0]
