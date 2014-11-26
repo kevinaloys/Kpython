@@ -15,6 +15,14 @@ def popp(data, number):
         data.pop()
     return ''.join(data)
 
+def is_conso_vowel_conso(data):
+    data = list(data)
+    if (((data[-3] and data[-1]) not in 'aeiouAEIOU') and (data[-2] in 'aeiouAEIOU')):
+        return True
+    else:
+        return False
+
+
 def make_3gs_form(verb):
     if verb.endswith('y'):
         verb = popp(verb, 1)
@@ -28,4 +36,29 @@ def make_3gs_form(verb):
 
     return verb
 
-print(make_3gs_form('hack'))
+def make_int_form(verb):
+    if verb.endswith('e'):
+        if verb == 'lie':
+            verb = popp(verb, 2)
+            verb = verb + 'y' + 'ing'
+        else:
+            if verb == ('see' or 'be' or 'flee' or 'knee'):
+                verb = verb + 'ing'
+            else:
+                verb = popp(verb, 1)
+                verb = verb + 'ing'
+
+    elif verb.endswith('ie'):
+        verb = popp(verb, 2)
+        verb = verb + 'y' + 'ing'
+
+    elif is_conso_vowel_conso(verb):
+        verb = verb + verb[-1]
+        verb = verb + 'ing'
+
+    else:
+        verb = verb + 'ing'
+
+    return verb
+
+print(make_int_form('lie'))
